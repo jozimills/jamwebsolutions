@@ -82,22 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact Form Handling
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            
-            // Here you would typically send the data to a server
-            // For now, we'll just show a success message
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-    }
-
     // Add scroll animation for cards and service rows
     const observerOptions = {
         threshold: 0.1,

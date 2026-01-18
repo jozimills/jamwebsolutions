@@ -79,6 +79,105 @@ body {
     align-items: center;
 }
 
+/* Dropdown menu for Services */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown .dropbtn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links .dropdown .dropdown-menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: var(--bg-darker);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    min-width: 220px;
+    padding: 0.25rem 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    display: none;
+    z-index: 2000;
+}
+
+.nav-links .dropdown .dropdown-menu li {
+    list-style: none;
+}
+
+.nav-links .dropdown .dropdown-menu li a {
+    display: block;
+    padding: 0.6rem 1rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links .dropdown .dropdown-menu li a:hover {
+    background: rgba(74, 123, 167, 0.08);
+    color: var(--primary-color);
+}
+
+/* Show dropdown on hover (desktop) */
+.nav-links .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Mobile navigation toggle */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10,10,10,0.98);
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .nav-links a {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .navbar.open .nav-links {
+        display: flex;
+    }
+
+    /* Make dropdown menus behave as collapsible sections on mobile */
+    .nav-links .dropdown .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+        display: none;
+        padding: 0;
+    }
+
+    .nav-links .dropdown.open .dropdown-menu {
+        display: block;
+    }
+}
+
 .nav-links a {
     color: var(--text-light);
     text-decoration: none;

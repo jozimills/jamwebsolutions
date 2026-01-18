@@ -122,6 +122,38 @@ document.addEventListener('DOMContentLoaded', function() {
         
         lastScroll = currentScroll;
     });
+
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navbar.classList.toggle('open');
+        });
+    }
+
+    // Make dropdowns toggle on tap for mobile
+    const dropButtons = document.querySelectorAll('.dropbtn');
+    dropButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const parent = btn.closest('.dropdown');
+            if (!parent) return;
+            // If viewport is small, toggle open state
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                parent.classList.toggle('open');
+            }
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth > 768) return;
+        const isClickInside = e.target.closest('.navbar');
+        if (!isClickInside) {
+            navbar.classList.remove('open');
+            document.querySelectorAll('.nav-links .dropdown.open').forEach(d => d.classList.remove('open'));
+        }
+    });
 });
 
 // Add CSS for code line animation

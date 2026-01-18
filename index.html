@@ -16,9 +16,20 @@
             <div class="logo">
                 <h1>JAM <span class="highlight">Web Solutions</span></h1>
             </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="packages.html">Packages</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html#services">Logo Design</a></li>
+                        <li><a href="about.html#services">Branding</a></li>
+                        <li><a href="about.html#services">Graphic Design</a></li>
+                        <li><a href="about.html#services">Social Media Marketing &amp; Management</a></li>
+                    </ul>
+                </li>
+                <li><a href="seo.html">SEO</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="#contact" class="btn-contact">Contact</a></li>
             </ul>
@@ -38,7 +49,7 @@
     <!-- Services Overview -->
     <section class="services">
         <div class="container">
-            <h2 class="section-title">What We Do</h2>
+            <h2 class="section-title">Web Designs for Any Needs</h2>
             
             <!-- Service 1 -->
             <div class="service-row service-left">
@@ -56,15 +67,15 @@
 
             <!-- Service 2 -->
             <div class="service-row service-right">
-                <div class="service-visual">
-                    <a href="#" class="visual-placeholder demo-link" target="_blank" rel="noopener noreferrer">
-                        <span class="code-snippet">{ cart: [] }</span>
-                        <span class="demo-text">View Demo</span>
-                    </a>
-                </div>
                 <div class="service-content">
                     <h3>E-Commerce Solutions</h3>
                     <p>Full-featured online stores built to sell your products 24/7. We integrate secure payment gateways (PayPal, Stripe, Square), shopping carts, product catalogs, inventory tracking, and order management systems. Whether you're selling physical products, digital downloads, or services, we create seamless shopping experiences that drive sales and handle everything from product browsing to checkout.</p>
+                </div>
+                <div class="service-visual">
+                    <a href="https://heatwave-essentials.com" class="visual-placeholder demo-link" target="_blank" rel="noopener noreferrer">
+                        <span class="code-snippet">{ cart: [] }</span>
+                        <span class="demo-text">View Demo</span>
+                    </a>
                 </div>
             </div>
 
@@ -84,14 +95,15 @@
 
             <!-- Service 4 -->
             <div class="service-row service-right">
-                <div class="service-visual">
-                    <div class="visual-placeholder">
-                        <span class="code-snippet">@media { }</span>
-                    </div>
-                </div>
                 <div class="service-content">
                     <h3>Responsive Design</h3>
                     <p>Mobile-friendly websites that look perfect on all devices, from phones to desktops. With over 60% of web traffic coming from mobile devices, we ensure your site automatically adapts to any screen size, providing an optimal viewing experience whether visitors are on smartphones, tablets, laptops, or desktop computers.</p>
+                </div>
+                <div class="service-visual">
+                    <a href="#" class="visual-placeholder demo-link" target="_blank" rel="noopener noreferrer">
+                        <span class="code-snippet">@media { }</span>
+                        <span class="demo-text">View Demo</span>
+                    </a>
                 </div>
             </div>
         </div>

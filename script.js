@@ -107,6 +107,31 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
+    // Career button behavior for the careers page
+    const careerButtons = document.querySelectorAll('.career-select');
+    const positionInput = document.getElementById('positionInput');
+    const applicationTitle = document.getElementById('applicationTitle');
+    
+    careerButtons.forEach(button => {
+        button.addEventListener('click', event => {
+            const position = button.dataset.position;
+            if (positionInput) {
+                positionInput.value = position;
+            }
+            if (applicationTitle) {
+                applicationTitle.textContent = `Apply for ${position}`;
+            }
+
+            const target = document.getElementById('applicationSection');
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
     // Navbar scroll effect
     let lastScroll = 0;
     const navbar = document.querySelector('.navbar');

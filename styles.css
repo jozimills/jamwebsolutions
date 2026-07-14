@@ -609,6 +609,84 @@ body {
     resize: vertical;
 }
 
+.careers-copy {
+    color: var(--text-gray);
+    font-size: 1.1rem;
+    max-width: 780px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.career-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0 4rem;
+}
+
+.career-card {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.career-card h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.career-card p {
+    color: var(--text-gray);
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
+}
+
+.career-card .btn {
+    width: 100%;
+}
+
+.careers-form {
+    padding-top: 2rem;
+}
+
+#applicationTitle {
+    margin-bottom: 0.5rem;
+}
+
+.application-form .btn {
+    width: 100%;
+}
+
+/* Style for select inputs in forms: inverted colors and slightly larger */
+.form-group select {
+    width: 100%;
+    padding: 1.05rem;
+    background: #ffffff;
+    color: #0a0a0a;
+    border: 1px solid rgba(74, 123, 167, 0.85);
+    border-radius: 5px;
+    font-size: 1.05rem;
+    transition: border-color 0.3s, box-shadow 0.15s;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(74, 123, 167, 0.06);
+}
+
+.form-group select option {
+    background: #ffffff;
+    color: #0a0a0a;
+}
+
 .contact-form .btn {
     width: 100%;
 }
@@ -890,6 +968,12 @@ body {
 
     .package-card {
         margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .career-options {
+        grid-template-columns: 1fr;
     }
 }
 
